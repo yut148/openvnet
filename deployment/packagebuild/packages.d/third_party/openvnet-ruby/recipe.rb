@@ -2,10 +2,10 @@ class OpenvnetRuby < FPM::Cookery::Recipe
   description 'The Ruby virtual machine(For OpenVNet bundle)'
 
   name 'openvnet-ruby'
-  version '2.1.1'
+  version '2.3.1'
   revision 0
   homepage 'http://www.ruby-lang.org/'
-  source "http://ftp.ruby-lang.org/pub/ruby/2.1/ruby-#{version.split('.')[0,3].join('.')}.tar.bz2"
+  source "http://ftp.ruby-lang.org/pub/ruby/2.3/ruby-#{version.split('.')[0,3].join('.')}.tar.bz2"
 
   vendor     'axsh'
   license    'The Ruby License'
@@ -42,6 +42,7 @@ class OpenvnetRuby < FPM::Cookery::Recipe
     make :install, :DESTDIR => destdir
     gem 'install', 'bundler', '--no-ri', '--no-rdoc'
     safesystem 'bash', '-c', <<EOF
+echo #{destdir}
 for i in $(find #{destdir} -type f -and -executable); do
   if file -b "$i" | grep -q '^ELF ' > /dev/null; then
     chrpath --replace /opt/axsh/openvnet/ruby/lib "$i" || :
