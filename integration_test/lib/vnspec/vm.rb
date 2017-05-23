@@ -460,7 +460,7 @@ module Vnspec
           when :route_default_via
             'ip route add default via ' + params.to_s + ' dev %s'
           when :arp_flush
-            'ip neigh flush %s'
+            'ip neigh flush dev %s'
           else
             raise "unknown command: #{command}"
           end
