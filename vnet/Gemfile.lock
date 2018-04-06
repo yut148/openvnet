@@ -1,4 +1,17 @@
 GIT
+  remote: git://github.com/axsh/dcell.git
+  revision: 2cbae90683be1a7f6c5c4fb4def54f6f528e9f06
+  branch: v0.16.1-updated-gems
+  specs:
+    dcell (0.16.1)
+      celluloid (~> 0.16.0)
+      celluloid-redis
+      celluloid-zmq (~> 0.16.0)
+      http (~> 3.0.0)
+      redis-namespace
+      reel (~> 0.6.1)
+
+GIT
   remote: https://github.com/axsh/racket.git
   revision: c8ae65fa5dc2ca5c31be3cc3d55b848967cd6af4
   specs:
@@ -39,35 +52,18 @@ GEM
     bindata (2.1.0)
     bit-struct (0.16)
     byebug (10.0.2)
-    celluloid (0.17.3)
-      celluloid-essentials
-      celluloid-extras
-      celluloid-fsm
-      celluloid-pool
-      celluloid-supervision
-      timers (>= 4.1.1)
-    celluloid-essentials (0.20.5)
-      timers (>= 4.1.1)
-    celluloid-extras (0.20.5)
-      timers (>= 4.1.1)
-    celluloid-fsm (0.20.5)
-      timers (>= 4.1.1)
-    celluloid-io (0.17.3)
-      celluloid (>= 0.17.2)
-      nio4r (>= 1.1)
-      timers (>= 4.1.1)
-    celluloid-pool (0.20.5)
-      timers (>= 4.1.1)
+    celluloid (0.16.0)
+      timers (~> 4.0.0)
+    celluloid-io (0.16.2)
+      celluloid (>= 0.16.0)
+      nio4r (>= 1.1.0)
     celluloid-redis (0.0.2)
       celluloid-io (>= 0.13.0.pre)
       redis
-    celluloid-supervision (0.20.6)
-      timers (>= 4.1.1)
-    celluloid-zmq (0.17.2)
-      celluloid (>= 0.17.2)
+    celluloid-zmq (0.16.1)
+      celluloid (~> 0.16)
       ffi
       ffi-rzmq
-      timers (>= 4.1.1)
     coderay (1.1.2)
     concurrent-ruby (1.0.5)
     coveralls (0.8.21)
@@ -79,12 +75,6 @@ GEM
     crack (0.4.3)
       safe_yaml (~> 1.0.0)
     database_cleaner (1.6.2)
-    dcell (0.16.0)
-      celluloid (>= 0.16.0)
-      celluloid-redis
-      celluloid-zmq (>= 0.16.0)
-      redis-namespace
-      reel
     diff-lcs (1.3)
     docile (1.1.5)
     domain_name (0.5.20170404)
@@ -204,7 +194,7 @@ GEM
     thor (0.19.4)
     thread_safe (0.3.6)
     tilt (2.0.8)
-    timers (4.1.2)
+    timers (4.0.4)
       hitimes
     tins (1.16.3)
     tzinfo (1.2.5)
@@ -234,7 +224,7 @@ DEPENDENCIES
   celluloid-io
   coveralls
   database_cleaner
-  dcell
+  dcell!
   fabrication (= 2.9.8)
   ffi-rzmq
   fuguta

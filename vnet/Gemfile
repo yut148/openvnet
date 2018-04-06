@@ -4,7 +4,7 @@ gem 'ffi-rzmq'
 gem "bit-struct", ">= 0.13.7"
 gem "celluloid"
 gem "celluloid-io"
-gem "dcell"
+gem "dcell", :github => 'axsh/dcell', :branch => 'v0.16.1-updated-gems'
 gem "fuguta"
 gem "ipaddress"
 gem "json"
