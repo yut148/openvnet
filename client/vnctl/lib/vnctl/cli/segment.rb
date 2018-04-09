@@ -6,7 +6,7 @@ module Vnctl::Cli
     api_suffix 'segments'
 
     add_shared_options {
-      option :topology_uuid, :type => :string, :desc => "The uuid of the topology this network is in."
+      option :topology_uuid, :type => :string, :desc => "The uuid of the topology this segment is in."
       option :mode, type: :string, required: true, desc: 'Can be either physical or virtual.'
     }
 
